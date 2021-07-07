@@ -18,7 +18,7 @@ const Root = styled.div`
   padding: 23px 0;
 `;
 const Amount = styled.div`
-  font-family: Segoe UI;
+  font-family: Rubik;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;

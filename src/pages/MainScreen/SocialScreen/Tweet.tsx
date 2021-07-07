@@ -42,6 +42,7 @@ const Text = styled.div`
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
+  max-width: 320px;
 
   color: #0f1419;
 `;
@@ -60,7 +61,7 @@ const Tweet: React.FC<IProps> = ({ username = "eywa", minutes = 1 }) => {
     <Root>
       <Icon src={comment} alt="icon" />
       <Column>
-        <Row alignItems="center">
+        <Row alignItems="center" style={{ paddingBottom: 3 }}>
           <UserDetails alignItems="center">
             <Name>{username.toUpperCase()}</Name>
             <Username>@{username}</Username>
@@ -73,9 +74,9 @@ const Tweet: React.FC<IProps> = ({ username = "eywa", minutes = 1 }) => {
           EYWA is doing major work on Community-Driven Design, with several
           different variants. If you are working in this area, submit a paper to
           the DIS conference here in San Diego (see DesignLab posting below)....
-          <span style={{ color: "#1DA1F2" }}>
+          <div style={{ color: "#1DA1F2" }}>
             https://facebook.com/don.norman.18/...
-          </span>
+          </div>
         </Text>
         <TweetActivity comments={3} likes={16} />
       </Column>
