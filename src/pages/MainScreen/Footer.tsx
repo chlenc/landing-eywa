@@ -57,6 +57,7 @@ const ExtendedColumn = styled(Column)`
 const Icons = styled.div`
   display: flex;
   justify-content: end;
+  padding: 10px 0px 40px;
 
   & :nth-child(2) {
     margin: 0 16px;
@@ -69,7 +70,10 @@ const Footer: React.FC<IProps> = () => {
       <Row>
         <Column>
           <Logo />
-          <Text>Crosschain liquidity AMM DEX and bridge protocol</Text>
+          <Text style={{ padding: "25px 0 16px" }}>
+            Crosschain liquidity AMM DEX <br />
+            and bridge protocol
+          </Text>
           <GrayText>Copyright 2021 EYWA.FI</GrayText>
         </Column>
       </Row>
@@ -100,7 +104,7 @@ const Footer: React.FC<IProps> = () => {
             <Twitter />
           </Icons>
           <Row justifyContent="flex-end">
-            <Title>RU</Title>
+            <Title style={{ paddingRight: 10 }}>RU</Title>
             <Title>ENG</Title>
           </Row>
         </ExtendedColumn>
