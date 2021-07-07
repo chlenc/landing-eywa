@@ -1,19 +1,20 @@
 import styled from "@emotion/styled";
 import React from "react";
-import { ReactComponent as Icon } from "@assets/img/eywa-comment-icon.svg";
+import comment from "@assets/img/eywa-comment-icon.svg";
 import { ReactComponent as Details } from "@assets/img/details-dots.svg";
-import { Row } from "@components/flex";
+import { Column, Row } from "@components/flex";
 
 interface IProps {
-  username: string;
-  minutes: number;
-  likes: number;
-  comments: number;
+  username?: string;
+  minutes?: number;
+  likes?: number;
+  comments?: number;
 }
 
 const Root = styled.div`
   display: flex;
-  flex-direction: column;
+  //flex-direction: column;
+  max-width: 410px;
 `;
 
 const Name = styled.div`
@@ -42,25 +43,36 @@ const Text = styled.div`
 
   color: #0f1419;
 `;
-
+const Icon = styled.img`
+  width: 48px;
+  height: 48px;
+  padding: 0 12px;
+`;
+const UserDetails = styled(Row)`
+  & > * {
+    margin-right: 4px;
+  }
+`;
 const Comment: React.FC<IProps> = ({ username = "eywa", minutes = 1 }) => {
   return (
     <Root>
-      <Icon />
-      <Row>
-        <Name>{username.toUpperCase()}</Name>
-        <Username>@{username.toUpperCase()}</Username>
-        <Username>{minutes} min</Username>
-        <Details />
-      </Row>
-      <Text>
-        EYWA is doing major work on Community-Driven Design, with several
-        different variants. If you are working in this area, submit a paper to
-        the DIS conference here in San Diego (see DesignLab posting below)....
-        <span style={{ color: "#1DA1F2" }}>
-          https://facebook.com/don.norman.18/...
-        </span>
-      </Text>
+      <Icon src={comment} alt="icon" />
+      <Column>
+        <UserDetails alignItems="center">
+          <Name>{username.toUpperCase()}</Name>
+          <Username>@{username}</Username>
+          <Username>{minutes} min</Username>
+          <Details />
+        </UserDetails>
+        <Text>
+          EYWA is doing major work on Community-Driven Design, with several
+          different variants. If you are working in this area, submit a paper to
+          the DIS conference here in San Diego (see DesignLab posting below)....
+          <span style={{ color: "#1DA1F2" }}>
+            https://facebook.com/don.norman.18/...
+          </span>
+        </Text>
+      </Column>
     </Root>
   );
 };

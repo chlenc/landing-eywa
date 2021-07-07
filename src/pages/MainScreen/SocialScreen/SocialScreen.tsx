@@ -3,6 +3,7 @@ import React from "react";
 import { Row } from "@components/flex";
 import MainCard from "@pages/MainScreen/SocialScreen/MainCard";
 import SocialIcons from "@components/SocialIcons";
+import Comment from "@pages/MainScreen/SocialScreen/Comment";
 
 interface IProps {}
 
@@ -12,6 +13,7 @@ const Root = styled.div`
   background: #03011f;
   padding: 90px 0 100px;
   justify-content: center;
+  align-items: center;
 `;
 
 const Title = styled.div`
@@ -37,6 +39,13 @@ const LearMore = styled.div`
   color: #3bc199;
   cursor: pointer;
 `;
+const SocialWrapper = styled(Row)`
+  background: #ffffff;
+  border-radius: 8px;
+  max-width: 1307px;
+  padding: 22px 4px;
+  margin: 17px;
+`;
 
 const SocialScreen: React.FC<IProps> = () => {
   return (
@@ -56,6 +65,11 @@ const SocialScreen: React.FC<IProps> = () => {
           <LearMore onClick={() => console.log("lol")}>Learn more</LearMore>
         </MainCard>
       </Row>
+      <SocialWrapper>
+        <Comment />
+        <Comment />
+        <Comment />
+      </SocialWrapper>
     </Root>
   );
 };
