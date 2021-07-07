@@ -2,7 +2,9 @@ import styled from "@emotion/styled";
 import React from "react";
 import comment from "@assets/img/eywa-comment-icon.svg";
 import { ReactComponent as Details } from "@assets/img/details-dots.svg";
+import { ReactComponent as Dot } from "@assets/img/dot.svg";
 import { Column, Row } from "@components/flex";
+import TweetActivity from "@pages/MainScreen/SocialScreen/TweetActivity";
 
 interface IProps {
   username?: string;
@@ -13,8 +15,8 @@ interface IProps {
 
 const Root = styled.div`
   display: flex;
-  //flex-direction: column;
-  max-width: 410px;
+  //max-width: 410px;
+  margin: 0 16px;
 `;
 
 const Name = styled.div`
@@ -53,17 +55,20 @@ const UserDetails = styled(Row)`
     margin-right: 4px;
   }
 `;
-const Comment: React.FC<IProps> = ({ username = "eywa", minutes = 1 }) => {
+const Tweet: React.FC<IProps> = ({ username = "eywa", minutes = 1 }) => {
   return (
     <Root>
       <Icon src={comment} alt="icon" />
       <Column>
-        <UserDetails alignItems="center">
-          <Name>{username.toUpperCase()}</Name>
-          <Username>@{username}</Username>
-          <Username>{minutes} min</Username>
+        <Row alignItems="center">
+          <UserDetails alignItems="center">
+            <Name>{username.toUpperCase()}</Name>
+            <Username>@{username}</Username>
+            <Dot />
+            <Username>{minutes} min</Username>
+          </UserDetails>
           <Details />
-        </UserDetails>
+        </Row>
         <Text>
           EYWA is doing major work on Community-Driven Design, with several
           different variants. If you are working in this area, submit a paper to
@@ -72,8 +77,9 @@ const Comment: React.FC<IProps> = ({ username = "eywa", minutes = 1 }) => {
             https://facebook.com/don.norman.18/...
           </span>
         </Text>
+        <TweetActivity comments={3} likes={16} />
       </Column>
     </Root>
   );
 };
-export default Comment;
+export default Tweet;
