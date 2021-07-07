@@ -11,8 +11,12 @@ const Root = styled.div`
   display: flex;
   flex-direction: row;
 
-  & :nth-child(2) {
-    margin: 0 16px;
+  & > * {
+    margin-right: 16px;
+  }
+
+  & > :last-of-type {
+    margin-right: 0;
   }
 `;
 
