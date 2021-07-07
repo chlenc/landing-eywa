@@ -1,11 +1,9 @@
 import styled from "@emotion/styled";
 import React from "react";
 import { ReactComponent as Logo } from "@assets/img/logo.svg";
-import { ReactComponent as FacebookIcon } from "@assets/img/facebook.svg";
-import { ReactComponent as TelegramIcon } from "@assets/img/telegram.svg";
-import { ReactComponent as TwitterIcon } from "@assets/img/twitter.svg";
 import { Link } from "react-router-dom";
 import { Row } from "@components/flex";
+import SocialIcons from "@components/SocialIcons";
 interface IProps {}
 
 const Root = styled(Row)`
@@ -49,15 +47,7 @@ const TopMenu: React.FC<IProps> = () => {
         <MenuLink to="/">COMmUNITY</MenuLink>
         <MenuLink to="/">GITHUB</MenuLink>
         <MenuLink to="/">CONTACTS</MenuLink>
-        <Link to="/">
-          <FacebookIcon />
-        </Link>
-        <Link to="/">
-          <TelegramIcon />
-        </Link>
-        <Link to="/">
-          <TwitterIcon />
-        </Link>
+        <SocialIcons />
       </ItemsWrapper>
     </Root>
   );
