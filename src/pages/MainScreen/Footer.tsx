@@ -2,9 +2,7 @@ import styled from "@emotion/styled";
 import React from "react";
 import { Column, Row } from "@components/flex";
 import { ReactComponent as Logo } from "@assets/img/footer-logo.svg";
-import { ReactComponent as Facebook } from "@assets/img/facebook.svg";
-import { ReactComponent as Telegram } from "@assets/img/telegram.svg";
-import { ReactComponent as Twitter } from "@assets/img/twitter.svg";
+import SocialIcons from "@components/SocialIcons";
 
 interface IProps {}
 
@@ -98,11 +96,7 @@ const Footer: React.FC<IProps> = () => {
           <Subtitle>Medium</Subtitle>
         </ExtendedColumn>
         <ExtendedColumn>
-          <Icons>
-            <Facebook />
-            <Telegram />
-            <Twitter />
-          </Icons>
+          <SocialIcons />
           <Row justifyContent="flex-end">
             <Title style={{ paddingRight: 10 }}>RU</Title>
             <Title>ENG</Title>

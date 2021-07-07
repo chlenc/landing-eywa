@@ -3,6 +3,7 @@ import React from "react";
 import Header from "@pages/MainScreen/Header";
 import Footer from "@pages/MainScreen/Footer";
 import UserExperience from "@pages/MainScreen/UserExperience";
+import SocialScreen from "@pages/MainScreen/SocialScreen/SocialScreen";
 
 interface IProps {}
 
@@ -16,6 +17,7 @@ const MainScreen: React.FC<IProps> = () => {
     <Root>
       <Header />
       <UserExperience />
+      <SocialScreen />
       <Footer />
     </Root>
   );
