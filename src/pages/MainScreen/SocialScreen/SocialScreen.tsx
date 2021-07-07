@@ -6,6 +6,7 @@ import SocialIcons from "@components/SocialIcons";
 import Tweet from "@pages/MainScreen/SocialScreen/Tweet";
 import digiu from "@assets/img/digiu.svg";
 import brCapital from "@assets/img/br-capital.png";
+import {ReactComponent as Logo} from "@assets/img/bigLogo.svg";
 
 interface IProps {
 }
@@ -34,6 +35,8 @@ const Title = styled.div`
 `;
 
 const LearMore = styled.div`
+  display: flex;
+  justify-content: space-between;
   font-family: Rubik;
   font-style: normal;
   font-weight: 500;
@@ -87,7 +90,10 @@ const SocialScreen: React.FC<IProps> = () => {
                     title="EYWA Relayers Network launch program"
                     subtitle="Participate in the protocol Beta testing and get extra rewards."
                 >
-                    <LearMore onClick={() => console.log("lol")}>Learn more</LearMore>
+                    <LearMore>
+                        <div>Lear more</div>
+                        <Logo/>
+                    </LearMore>
                 </MainCard>
             </Row>
             <TweeetsWrapper>

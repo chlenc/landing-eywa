@@ -17,7 +17,7 @@ const Root = styled.div`
   box-shadow: 0px 4px 31px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   max-width: 640px;
-  min-height: 390px;
+  height: 390px;
   padding: 50px 40px;
 `;
 const Title = styled.div`
