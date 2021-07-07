@@ -37,6 +37,7 @@ const Subtitle = styled.div`
   line-height: 34px;
   letter-spacing: 0.01em;
   color: #03011f;
+  padding-bottom: 30px;
 `;
 
 const MainCard: React.FC<IProps> = ({ title, subtitle, children }) => {

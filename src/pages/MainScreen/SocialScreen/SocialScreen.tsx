@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import React from "react";
 import { Row } from "@components/flex";
 import MainCard from "@pages/MainScreen/SocialScreen/MainCard";
+import SocialIcons from "@components/SocialIcons";
 
 interface IProps {}
 
@@ -27,6 +28,16 @@ const Title = styled.div`
   padding-bottom: 50px;
 `;
 
+const LearMore = styled.div`
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 34px;
+  color: #3bc199;
+  cursor: pointer;
+`;
+
 const SocialScreen: React.FC<IProps> = () => {
   return (
     <Root>
@@ -36,13 +47,13 @@ const SocialScreen: React.FC<IProps> = () => {
           title="Community"
           subtitle="Learn more about EYWA, chat with the team, and be the part of our growing community."
         >
-          rere
+          <SocialIcons />
         </MainCard>
         <MainCard
           title="EYWA Relayers Network launch program"
           subtitle="Participate in the protocol Beta testing and get extra rewards."
         >
-          rere
+          <LearMore onClick={() => console.log("lol")}>Learn more</LearMore>
         </MainCard>
       </Row>
     </Root>
