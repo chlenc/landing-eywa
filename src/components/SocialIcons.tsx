@@ -10,7 +10,6 @@ interface IProps {}
 const Root = styled.div`
   display: flex;
   flex-direction: row;
-
   & > * {
     margin-right: 16px;
   }
@@ -24,13 +23,13 @@ const SocialIcons: React.FC<IProps> = () => {
   return (
     <Root>
       <Link to="/">
-        <FacebookIcon />
+        <FacebookIcon style={{ background: "#fff", borderRadius: "50%" }} />
       </Link>
       <Link to="/">
-        <TelegramIcon />
+        <TelegramIcon style={{ background: "#fff", borderRadius: "50%" }} />
       </Link>
       <Link to="/">
-        <TwitterIcon />
+        <TwitterIcon style={{ background: "#fff", borderRadius: "50%" }} />
       </Link>
     </Root>
   );
