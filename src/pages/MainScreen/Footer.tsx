@@ -10,7 +10,7 @@ const Root = styled.div`
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
-  padding: 37px 40px 0 40px;
+  padding: 37px 40px 43px 40px;
   //align-items: center;
   justify-content: space-between;
 `;
@@ -51,15 +51,6 @@ const GrayText = styled.div`
 `;
 const ExtendedColumn = styled(Column)`
   padding: 0 40px;
-`;
-const Icons = styled.div`
-  display: flex;
-  justify-content: end;
-  padding: 10px 0px 40px;
-
-  & :nth-child(2) {
-    margin: 0 16px;
-  }
 `;
 
 const Footer: React.FC<IProps> = () => {
