@@ -3,7 +3,10 @@ import React from "react";
 import { Column } from "@components/flex";
 import Button from "@components/Button";
 import TopMenu from "@components/TopMenu";
-
+import Advantages from "@components/Advantages";
+import { ReactComponent as Swap } from "@assets/img/swap.svg";
+import { ReactComponent as Database } from "@assets/img/database.svg";
+import { ReactComponent as CrossChain } from "@assets/img/cross-chain.svg";
 interface IProps {}
 
 const Root = styled.div`
@@ -50,7 +53,7 @@ const ButtonsWrapper = styled.div`
     margin-left: 16px;
   }
 
-  &:last-of-type {
+  & > :first-of-type {
     margin: 0;
   }
 `;
@@ -70,6 +73,26 @@ const Header: React.FC<IProps> = () => {
           <Button>DOCS</Button>
         </ButtonsWrapper>
       </Body>
+      <Advantages
+        dark
+        title="Multichain Automated Marketplace"
+        subtitle={
+          "EYWA protocol empowers developers, liquidity providers and traders to participate\nin a cross-chain financial marketplace that is open and accessible to all."
+        }
+        items={[
+          {
+            icon: <Swap />,
+            title: "Cross-chain swap \nand bridge",
+            link: "/",
+          },
+          {
+            icon: <Database />,
+            title: "Cross-chain liquidity pools\nand yield farming",
+            link: "/",
+          },
+          { icon: <CrossChain />, title: "EYWA relayers network", link: "/" },
+        ]}
+      />
     </Root>
   );
 };

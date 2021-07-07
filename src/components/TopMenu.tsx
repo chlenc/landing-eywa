@@ -32,7 +32,7 @@ const ItemsWrapper = styled.div`
   & > * {
     margin-right: 16px;
   }
-  &:last-of-type {
+  & > :last-of-type {
     margin-right: 0;
   }
 `;
