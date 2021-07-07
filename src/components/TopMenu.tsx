@@ -1,0 +1,65 @@
+import styled from "@emotion/styled";
+import React from "react";
+import { ReactComponent as Logo } from "@assets/img/logo.svg";
+import { ReactComponent as FacebookIcon } from "@assets/img/facebook.svg";
+import { ReactComponent as TelegramIcon } from "@assets/img/telegram.svg";
+import { ReactComponent as TwitterIcon } from "@assets/img/twitter.svg";
+import { Link } from "react-router-dom";
+import { Row } from "@components/flex";
+interface IProps {}
+
+const Root = styled(Row)`
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const MenuLink = styled(Link)`
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding-right: 24px;
+  color: #fff;
+  text-decoration: none;
+`;
+
+const ItemsWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  & > * {
+    margin-right: 16px;
+  }
+  &:last-of-type {
+    margin-right: 0;
+  }
+`;
+
+const TopMenu: React.FC<IProps> = () => {
+  return (
+    <Root>
+      <Link to="/">
+        <Logo />
+      </Link>
+      <ItemsWrapper>
+        <MenuLink to="/">ABOUT</MenuLink>
+        <MenuLink to="/">TECHNOLOGY</MenuLink>
+        <MenuLink to="/">COMmUNITY</MenuLink>
+        <MenuLink to="/">GITHUB</MenuLink>
+        <MenuLink to="/">CONTACTS</MenuLink>
+        <Link to="/">
+          <FacebookIcon />
+        </Link>
+        <Link to="/">
+          <TelegramIcon />
+        </Link>
+        <Link to="/">
+          <TwitterIcon />
+        </Link>
+      </ItemsWrapper>
+    </Root>
+  );
+};
+export default TopMenu;
