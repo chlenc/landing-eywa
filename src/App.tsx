@@ -1,11 +1,25 @@
 import React from "react";
 import "./App.css";
 import styled from "@emotion/styled";
+import { Route, Switch } from "react-router-dom";
+import MainScreen from "@pages/MainScreen";
 
 const Root = styled.div``;
 
+enum ROUTES {
+  root = "/",
+}
+
 const App = () => {
-  return <Root></Root>;
+  return (
+    <Root>
+      <Switch>
+        <Route path={ROUTES.root}>
+          <MainScreen />
+        </Route>
+      </Switch>
+    </Root>
+  );
 };
 
 export default App;

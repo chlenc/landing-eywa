@@ -6,10 +6,9 @@ interface IProps {}
 const Root = styled.div`
   display: flex;
   flex-direction: column;
-  background: #03011f;
 `;
 
-const MainScreen: React.FC<IProps> = () => {
+const TopMenu: React.FC<IProps> = () => {
   return <Root></Root>;
 };
-export default MainScreen;
+export default TopMenu;
